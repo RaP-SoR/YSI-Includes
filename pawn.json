@@ -3,7 +3,7 @@
 	"repo": "YSI-Includes",
 	"dependencies": [
 		"oscar-broman/md-sort",
-		"sampctl/samp-stdlib",
+		"openmultiplayer/omp-stdlib",
 		"Y-Less/code-parse.inc",
 		"Y-Less/indirection",
 		"Zeex/amx_assembly"
