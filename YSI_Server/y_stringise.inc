@@ -103,7 +103,7 @@ Optional plugins:
 */
 
 #if !defined _INC_y_stringise
-	#tryinclude "y_stringise\y_stringise_entry"
+	#tryinclude <YSI_Server\y_stringise\y_stringise_entry>
 #endif
 #if !defined _INC_y_stringise
 	#tryinclude "YSI_Data\y_stringise\y_stringise_entry"

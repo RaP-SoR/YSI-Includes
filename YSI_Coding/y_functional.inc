@@ -90,7 +90,7 @@ Optional plugins:
 */
 
 #if !defined _INC_y_functional
-	#tryinclude "y_functional\y_functional_entry"
+	#tryinclude <YSI_Coding\y_functional\y_functional_entry>
 #endif
 #if !defined _INC_y_functional
 	#tryinclude "YSI_Core\y_functional\y_functional_entry"

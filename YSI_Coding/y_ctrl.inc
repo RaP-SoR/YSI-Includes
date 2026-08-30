@@ -94,10 +94,10 @@ Optional plugins:
 #endif
 
 #if !defined _INC_y_ctrl
-	#tryinclude "y_ctrl\y_ctrl_entry"
+	#tryinclude <YSI_Coding\y_ctrl\y_ctrl_entry>
 #endif
 #if !defined _INC_y_ctrl
-	#tryinclude "YSI_Coding\y_ctrl\y_ctrl_entry"
+	#tryinclude <YSI_Coding\y_ctrl\y_ctrl_entry>
 #endif
 #if !defined _INC_y_ctrl
 	#tryinclude "YSI\YSI_Coding\y_ctrl\y_ctrl_entry"

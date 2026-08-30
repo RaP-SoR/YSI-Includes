@@ -100,10 +100,10 @@ Optional plugins:
 */
 
 #if !defined _INC_y_xml
-	#tryinclude "y_xml\y_xml_entry"
+	#tryinclude <YSI_Storage\y_xml\y_xml_entry>
 #endif
 #if !defined _INC_y_xml
-	#tryinclude "YSI_Storage\y_xml\y_xml_entry"
+	#tryinclude <YSI_Storage\y_xml\y_xml_entry>
 #endif
 #if !defined _INC_y_xml
 	#tryinclude "YSI\YSI_Storage\y_xml\y_xml_entry"

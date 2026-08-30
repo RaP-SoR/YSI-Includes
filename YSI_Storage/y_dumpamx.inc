@@ -94,10 +94,10 @@ Optional plugins:
 */
 
 #if !defined _INC_y_dumpamx
-	#tryinclude "y_dumpamx\y_dumpamx_entry"
+	#tryinclude <YSI_Storage\y_dumpamx\y_dumpamx_entry>
 #endif
 #if !defined _INC_y_dumpamx
-	#tryinclude "YSI_Storage\y_dumpamx\y_dumpamx_entry"
+	#tryinclude <YSI_Storage\y_dumpamx\y_dumpamx_entry>
 #endif
 #if !defined _INC_y_dumpamx
 	#tryinclude "YSI\YSI_Storage\y_dumpamx\y_dumpamx_entry"

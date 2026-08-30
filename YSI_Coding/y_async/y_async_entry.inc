@@ -78,7 +78,7 @@ Optional plugins:
 
 //#include "..\..\YSI_Core\y_utils"
 //#include "..\..\YSI_Server\y_thirdpartyinclude"
-#include "y_async_impl"
+#include <YSI_Coding\y_async\y_async_impl>
 
 #if defined YSI_TESTS
 	#if defined YSI_NO_TEST_WARNINGS
@@ -92,7 +92,7 @@ Optional plugins:
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_remote_tests"
+	#include <YSI_Coding\y_remote\y_remote_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif

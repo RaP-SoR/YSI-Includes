@@ -86,10 +86,10 @@ Optional plugins:
 */
 
 #if !defined _INC_y_malloc
-	#tryinclude "y_malloc\y_malloc_entry"
+	#tryinclude <YSI_Coding\y_malloc\y_malloc_entry>
 #endif
 #if !defined _INC_y_malloc
-	#tryinclude "YSI_Coding\y_malloc\y_malloc_entry"
+	#tryinclude <YSI_Coding\y_malloc\y_malloc_entry>
 #endif
 #if !defined _INC_y_malloc
 	#tryinclude "YSI\YSI_Coding\y_malloc\y_malloc_entry"

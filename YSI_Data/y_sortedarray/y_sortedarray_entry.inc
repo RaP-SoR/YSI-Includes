@@ -76,7 +76,7 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_utils"
+#include <YSI_Core\y_utils>
 
 #define SortedArray:%0<%1> SortedData_%0[%1],SortedSize_%0
 
@@ -271,7 +271,7 @@ stock bool:_Sorted_Remove(arr[], &size, value)
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_sortedarray_tests"
+	#include <YSI_Data\y_sortedarray\y_sortedarray_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif

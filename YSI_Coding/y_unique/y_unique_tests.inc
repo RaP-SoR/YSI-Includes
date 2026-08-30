@@ -95,7 +95,7 @@ Optional plugins:
 
 // This slightly hacks the numbers by relying on `else`.
 #undef UNIQUE_FUNCTION
-#include "y_unique_1024_1087"
+#include <YSI_Coding\y_unique\y_unique_1024_1087>
 
 static stock y_unique_GetNumber0()
 {
@@ -103,7 +103,7 @@ static stock y_unique_GetNumber0()
 }
 
 #undef UNIQUE_FUNCTION
-#include "y_unique_1024_1087"
+#include <YSI_Coding\y_unique\y_unique_1024_1087>
 
 static stock y_unique_GetNumber1()
 {
@@ -111,7 +111,7 @@ static stock y_unique_GetNumber1()
 }
 
 #undef UNIQUE_FUNCTION
-#include "y_unique_1024_1087"
+#include <YSI_Coding\y_unique\y_unique_1024_1087>
 
 static stock y_unique_GetNumber2()
 {
@@ -119,7 +119,7 @@ static stock y_unique_GetNumber2()
 }
 
 #undef UNIQUE_FUNCTION
-#include "y_unique_1024_1087"
+#include <YSI_Coding\y_unique\y_unique_1024_1087>
 
 @test(.group = "y_unique") y_unique()
 {

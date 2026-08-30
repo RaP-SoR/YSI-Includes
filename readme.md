@@ -12,8 +12,10 @@
 The libraries are split up approximately by usage.  Each one is included by group and name, so to include *y_va*, which is in *Coding* use:
 
 ```pawn
-#include <YSI_Coding\y_va>
+#include <YSI_Coding/y_va>
 ```
+
+On Linux (sampctl / pawncc) compile with `-Z+` so YSI's backslash include paths open. Wrapper includes may use `/` or `\`.
 
 Although YSI provides a lot of libraries, they aren't included unless you include them.  So if you don't want *y_zonepulse* just don't include it and it won't appear in your mode at all.  This means YSI can contain a lot of functions, but they're all optional.
 

@@ -76,11 +76,11 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_utils"
-#include "..\y_decorator"
-#include "..\y_serverdata"
-#include "..\y_thirdpartyinclude\y3_codeparse"
-#include "..\y_thirdpartyinclude\y3_amx_assembly"
+#include <YSI_Core\y_utils>
+#include <YSI_Server\y_decorator>
+#include <YSI_Server\y_serverdata>
+#include <YSI_Server\y_thirdpartyinclude\y3_codeparse>
+#include <YSI_Server\y_thirdpartyinclude\y3_amx_assembly>
 
 /*
 @native("CreateDynamicCircle") STREAMER_TAG_AREA:MAYBE_CreateDynamicCircle(Float:x, Float:y, Float:size, worldid = -1, interiorid = -1, playerid = -1, priority = 0);
@@ -256,7 +256,7 @@ stock _yN@(const string:name[], &s, const string:requires[] = "", f = 0, print =
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_natives_tests"
+	#include <YSI_Server\y_natives\y_natives_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif

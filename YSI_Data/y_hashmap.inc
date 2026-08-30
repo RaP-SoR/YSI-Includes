@@ -90,7 +90,7 @@ Optional plugins:
 */
 
 #if !defined _INC_y_hashmap
-	#tryinclude "y_hashmap\y_hashmap_entry"
+	#tryinclude <YSI_Data\y_hashmap\y_hashmap_entry>
 #endif
 #if !defined _INC_y_hashmap
 	#tryinclude "YSI_Core\y_hashmap\y_hashmap_entry"

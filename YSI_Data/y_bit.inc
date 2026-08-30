@@ -104,10 +104,10 @@ Optional plugins:
 */
 
 #if !defined _INC_y_bit
-	#tryinclude "y_bit\y_bit_entry"
+	#tryinclude <YSI_Data\y_bit\y_bit_entry>
 #endif
 #if !defined _INC_y_bit
-	#tryinclude "YSI_Data\y_bit\y_bit_entry"
+	#tryinclude <YSI_Data\y_bit\y_bit_entry>
 #endif
 #if !defined _INC_y_bit
 	#tryinclude "YSI\YSI_Data\y_bit\y_bit_entry"

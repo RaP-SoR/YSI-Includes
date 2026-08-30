@@ -694,10 +694,10 @@ Optional plugins:
 #define Y_GTEST_GROUP_LIMIT 123
 #define Y_GTEST_GROUP_TAG _
 
-#include "y_groups__include"
+#include <YSI_Players\y_groups\y_groups__include>
 
 #define MASTER 60
-#include "..\..\YSI_Core\y_master"
+#include <YSI_Core\y_master>
 
 static
 	gPl = 0,

@@ -90,10 +90,10 @@ Optional plugins:
 */
 
 #if !defined _INC_y_async
-	#tryinclude "y_async\y_async_entry"
+	#tryinclude <YSI_Coding\y_async\y_async_entry>
 #endif
 #if !defined _INC_y_async
-	#tryinclude "YSI_Coding\y_async\y_async_entry"
+	#tryinclude <YSI_Coding\y_async\y_async_entry>
 #endif
 #if !defined _INC_y_async
 	#tryinclude "YSI\YSI_Coding\y_async\y_async_entry"

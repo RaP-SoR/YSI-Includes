@@ -95,10 +95,10 @@ Optional plugins:
 #endif
 
 #if !defined _Y_MASTER_INCLUDED
-	#tryinclude "y_master\y_master_entry"
+	#tryinclude <YSI_Core\y_master\y_master_entry>
 #endif
 #if !defined _Y_MASTER_INCLUDED
-	#tryinclude "YSI_Core\y_master\y_master_entry"
+	#tryinclude <YSI_Core\y_master\y_master_entry>
 #endif
 #if !defined _Y_MASTER_INCLUDED
 	#tryinclude "YSI\YSI_Core\y_master\y_master_entry"
@@ -112,6 +112,6 @@ Optional plugins:
 #if defined _Y_MASTER_INCLUDED
 	#undef _Y_MASTER_INCLUDED
 #else
-	#error Did you use `YSI_Core/y_master` instead of `YSI_Core\y_master`?
+	#error Could not find y_master. On Linux, compile with -Z+.
 #endif
 

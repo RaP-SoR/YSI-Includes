@@ -86,21 +86,21 @@ forward OnPlayerLogout(playerid, uid);
 
 forward OnPlayerSaved(playerid, uid);
 
-#include "..\..\YSI_Core\y_utils"
+#include <YSI_Core\y_utils>
 
-#include "..\..\YSI_Players\y_text"
+#include <YSI_Players\y_text>
 
-#include "..\..\YSI_Coding\y_remote"
-#include "..\..\YSI_Storage\y_ini"
-#include "..\..\YSI_Coding\y_timers"
+#include <YSI_Coding\y_remote>
+#include <YSI_Storage\y_ini>
+#include <YSI_Coding\y_timers>
 
 #define YSIM_U_DISABLE
 #define MASTER 55
-#include "..\..\YSI_Core\y_master"
+#include <YSI_Core\y_master>
 
 #define MAX_INDEX_LENGTH                8
 
-#include "..\..\YSI_Coding\y_hooks"
+#include <YSI_Coding\y_hooks>
 
 #if defined PP_ADLER32
 	//#define MAX_PASSWORD_LENGTH             11
@@ -187,14 +187,14 @@ FOREIGN__ Player_ChangeLanguage(playerid, string:code[]);
 	
 	// I know it is a bit odd that this should need y_ini for database access, but
 	// there is a very good reason (loading passwords).
-	#include "..\..\YSI_Storage\y_ini"
-	#include "..\..\YSI_Data\y_iterate"
+	#include <YSI_Storage\y_ini>
+	#include <YSI_Data\y_iterate>
 	
 	#include "y_users_dan10"
 #elseif defined USERS_USE_SQLITE
 	#include "y_users_sqlite"
 #else
-	#include "y_users_ini"
+	#include <YSI_Players\y_users\y_users_ini>
 #endif
 #if defined YSI_TESTS
 	#if defined YSI_NO_TEST_WARNINGS
@@ -208,11 +208,11 @@ FOREIGN__ Player_ChangeLanguage(playerid, string:code[]);
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_users_tests"
+	#include <YSI_Players\y_users\y_users_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif
 #endif
 
-#include "..\..\YSI_Core\y_master"
+#include <YSI_Core\y_master>
 

@@ -76,10 +76,10 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_utils"
-#include "..\..\YSI_Server\y_thirdpartyinclude"
+#include <YSI_Core\y_utils>
+#include <YSI_Server\y_thirdpartyinclude>
 
-#include "y_ctrl_impl"
+#include <YSI_Coding\y_ctrl\y_ctrl_impl>
 
 #if defined YSI_TESTS
 	#if defined YSI_NO_TEST_WARNINGS
@@ -93,7 +93,7 @@ Optional plugins:
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_ctrl_tests"
+	#include <YSI_Coding\y_ctrl\y_ctrl_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif

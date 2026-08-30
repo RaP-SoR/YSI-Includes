@@ -72,10 +72,10 @@ Optional plugins:
 */
 
 #if !defined _INC_y_bcrypt
-	#tryinclude "y_bcrypt\y_bcrypt_entry"
+	#tryinclude <YSI_Extra\y_bcrypt\y_bcrypt_entry>
 #endif
 #if !defined _INC_y_bcrypt
-	#tryinclude "YSI_Extra\y_bcrypt\y_bcrypt_entry"
+	#tryinclude <YSI_Extra\y_bcrypt\y_bcrypt_entry>
 #endif
 #if !defined _INC_y_bcrypt
 	#tryinclude "YSI\YSI_Extra\y_bcrypt\y_bcrypt_entry"

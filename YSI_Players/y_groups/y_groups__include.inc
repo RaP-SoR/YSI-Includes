@@ -2,7 +2,7 @@
 	#undef _inc_y_groups__include
 #endif
 
-#include "y_groups_setup"
+#include <YSI_Players\y_groups\y_groups_setup>
 
 // This file is included directly from any YSI library that wants to use groups,
 // but groups are only enabled if the end-user explicitly includes y_groups.
@@ -15,12 +15,12 @@
 #if defined Y_COMMANDS_GROUP_NAME
 	#define MASTER 51
 	#define YSIM_U_DISABLE
-	#include "..\..\YSI_Core\y_master"
+	#include <YSI_Core\y_master>
 
 	#define _GROUP_MAKE_LIMIT       Y_COMMANDS_GROUP_LIMIT
 	#define _GROUP_MAKE_NAME        Y_COMMANDS_GROUP_NAME
 	#define _GROUP_MAKE_TAG         Y_COMMANDS_GROUP_TAG
-	#include "y_groups__funcs"
+	#include <YSI_Players\y_groups\y_groups__funcs>
 
 	static stock y_groups_y_commands() <y_groups : y_groups_exists>
 	{
@@ -39,70 +39,70 @@
 	#undef Y_COMMANDS_GROUP_NAME
 	#undef Y_COMMANDS_GROUP_TAG
 
-	#include "..\..\YSI_Core\y_master"
+	#include <YSI_Core\y_master>
 #endif
 
 #if defined Y_AREAS_GROUP_NAME
 	#define MASTER 50
 	#define YSIM_U_DISABLE
-	#include "..\..\YSI_Core\y_master"
+	#include <YSI_Core\y_master>
 
 	#define _GROUP_MAKE_LIMIT       Y_AREAS_GROUP_LIMIT
 	#define _GROUP_MAKE_NAME        Y_AREAS_GROUP_NAME
 	#define _GROUP_MAKE_TAG         Y_AREAS_GROUP_TAG
-	#include "y_groups__funcs"
+	#include <YSI_Players\y_groups\y_groups__funcs>
 	#undef Y_AREAS_GROUP_LIMIT
 	#undef Y_AREAS_GROUP_NAME
 	#undef Y_AREAS_GROUP_TAG
 
-	#include "..\..\YSI_Core\y_master"
+	#include <YSI_Core\y_master>
 #endif
 
 #if defined Y_CLASSES_GROUP_NAME
 	#define MASTER 61
 	#define YSIM_U_DISABLE
-	#include "..\..\YSI_Core\y_master"
+	#include <YSI_Core\y_master>
 
 	#define _GROUP_MAKE_LIMIT       Y_CLASSES_GROUP_LIMIT
 	#define _GROUP_MAKE_NAME        Y_CLASSES_GROUP_NAME
 	#define _GROUP_MAKE_TAG         Y_CLASSES_GROUP_TAG
-	#include "y_groups__funcs"
+	#include <YSI_Players\y_groups\y_groups__funcs>
 	#undef Y_CLASSES_GROUP_LIMIT
 	#undef Y_CLASSES_GROUP_NAME
 	#undef Y_CLASSES_GROUP_TAG
 
-	#include "..\..\YSI_Core\y_master"
+	#include <YSI_Core\y_master>
 #endif
 
 #if defined Y_RACES_GROUP_NAME
 	#define MASTER 53
 	#define YSIM_U_DISABLE
-	#include "..\..\YSI_Core\y_master"
+	#include <YSI_Core\y_master>
 
 	#define _GROUP_MAKE_LIMIT       Y_RACES_GROUP_LIMIT
 	#define _GROUP_MAKE_NAME        Y_RACES_GROUP_NAME
 	#define _GROUP_MAKE_TAG         Y_RACES_GROUP_TAG
-	#include "y_groups__funcs"
+	#include <YSI_Players\y_groups\y_groups__funcs>
 	#undef Y_RACES_GROUP_LIMIT
 	#undef Y_RACES_GROUP_NAME
 	#undef Y_RACES_GROUP_TAG
 
-	#include "..\..\YSI_Core\y_master"
+	#include <YSI_Core\y_master>
 #endif
 
 #if defined Y_GTEST_GROUP_NAME
 	#define MASTER 60
-	#include "..\..\YSI_Core\y_master"
+	#include <YSI_Core\y_master>
 
 	#define _GROUP_MAKE_LIMIT       Y_GTEST_GROUP_LIMIT
 	#define _GROUP_MAKE_NAME        Y_GTEST_GROUP_NAME
 	#define _GROUP_MAKE_TAG         Y_GTEST_GROUP_TAG
-	#include "y_groups__funcs"
+	#include <YSI_Players\y_groups\y_groups__funcs>
 	#undef Y_GTEST_GROUP_LIMIT
 	#undef Y_GTEST_GROUP_NAME
 	#undef Y_GTEST_GROUP_TAG
 
-	#include "..\..\YSI_Core\y_master"
+	#include <YSI_Core\y_master>
 #endif
 
 //#if defined Y_TIMERS_GROUP_NAME
@@ -186,7 +186,7 @@
 		#else
 			#define _GROUP_MAKE_TAG _
 		#endif
-		#include "y_groups__funcs"
+		#include <YSI_Players\y_groups\y_groups__funcs>
 		// Now remove the defines.
 		#if defined GROUP_LIBRARY_TAGS
 			#undef GROUP_LIBRARY_TAGS

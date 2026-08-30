@@ -93,10 +93,10 @@ Optional plugins:
 */
 
 #if !defined _INC_y_serverdata
-	#tryinclude "y_serverdata\y_serverdata_entry"
+	#tryinclude <YSI_Server\y_serverdata\y_serverdata_entry>
 #endif
 #if !defined _INC_y_serverdata
-	#tryinclude "YSI_Server\y_serverdata\y_serverdata_entry"
+	#tryinclude <YSI_Server\y_serverdata\y_serverdata_entry>
 #endif
 #if !defined _INC_y_serverdata
 	#tryinclude "YSI\YSI_Server\y_serverdata\y_serverdata_entry"

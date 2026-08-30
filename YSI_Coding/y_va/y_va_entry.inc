@@ -76,15 +76,15 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_utils"
-#include "..\..\YSI_Server\y_thirdpartyinclude"
+#include <YSI_Core\y_utils>
+#include <YSI_Server\y_thirdpartyinclude>
 
 #if !defined YSI_MAX_INLINE_STRING
 	#define YSI_MAX_INLINE_STRING YSI_MAX_STRING
 #endif
 
-#include "y_va_header"
-#include "y_va_impl"
+#include <YSI_Coding\y_va\y_va_header>
+#include <YSI_Coding\y_va\y_va_impl>
 
 #if __COMPILER___EMIT_U
 	#define YSI_CheckNumargs__(%0) (__emit(LOAD.S.pri __args_offset) == ((%0) * cellbytes))
@@ -167,7 +167,7 @@ stock bool:va_SetVehicleNumberPlate(vehicleid, const fmat[], GLOBAL_TAG_TYPES:..
 			#pragma warning disable 239
 			#pragma warning disable 240
 		#endif
-		#include "y_va_tests"
+		#include <YSI_Coding\y_va\y_va_tests>
 		#if defined YSI_NO_TEST_WARNINGS
 			#pragma warning pop
 		#endif
@@ -459,7 +459,7 @@ stock bool:va_SetVehicleNumberPlate(vehicleid, const fmat[], GLOBAL_TAG_TYPES:..
 			#pragma warning disable 239
 			#pragma warning disable 240
 		#endif
-		#include "y_va_tests"
+		#include <YSI_Coding\y_va\y_va_tests>
 		#if defined YSI_NO_TEST_WARNINGS
 			#pragma warning pop
 		#endif

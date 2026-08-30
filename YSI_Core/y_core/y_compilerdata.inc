@@ -261,7 +261,7 @@ static stock const __COMPILER_PACKED_TEST[] = " ";
 
 #define __COMPILER_UNPACKEDMAX ((1<<cellbits)-1)
 
-#include "y_compilerdata_codepage"
+#include <YSI_Core\y_core\y_compilerdata_codepage>
 
 #define __COMPILER_BUG_317 (1)
 #define __COMPILER_NAMEOF (0)
@@ -427,7 +427,7 @@ const __COMPILER_DETERMINE_SEMICOLON = 1;
 
 	#if __COMPILER_USER_WARNING
 		#define Y_COMPILERDATA_WARNING 2
-		#include "y_compilerdata_warning"
+		#include <YSI_Core\y_core\y_compilerdata_warning>
 	#endif
 #else
 	#define __COMPILER_SEMICOLON (1)
@@ -559,13 +559,13 @@ const __CompilerDefault:__COMPILER_DEFAULT = __CompilerDefault:0;
 #endif
 
 #if __COMPILER_MODIFIED
-	#include "y_compilerdata_new"
+	#include <YSI_Core\y_core\y_compilerdata_new>
 #else
-	#include "y_compilerdata_old"
+	#include <YSI_Core\y_core\y_compilerdata_old>
 #endif
 
 #if !__COMPILER_PRAGMA
-	#include "y_compilerdata___pragma"
+	#include <YSI_Core\y_core\y_compilerdata___pragma>
 #endif
 
 // Blank function that does nothing except returns.

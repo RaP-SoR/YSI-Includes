@@ -76,7 +76,7 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\y_inline"
+#include <YSI_Coding\y_inline>
 
 // The fake definition from y_inline to give nicer errors.
 #undef EBC

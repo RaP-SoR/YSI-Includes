@@ -76,31 +76,31 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Server\y_thirdpartyinclude"
-#include "..\y_va"
-#include "..\y_cgen"
+#include <YSI_Server\y_thirdpartyinclude>
+#include <YSI_Coding\y_va>
+#include <YSI_Coding\y_cgen>
 
 #if !defined YSI_MAX_INLINE_STRING
 	#define YSI_MAX_INLINE_STRING YSI_MAX_STRING
 #endif
 
-#include "..\y_malloc"
+#include <YSI_Coding\y_malloc>
 
 CHAIN_HOOK(Inline)
 #undef CHAIN_ORDER
 #define CHAIN_ORDER CHAIN_NEXT(Inline)
 
-#include "y_inline_impl"
+#include <YSI_Coding\y_inline\y_inline_impl>
 
 // Not implemented errors.
-#include "y_inline_extra"
+#include <YSI_Coding\y_inline\y_inline_extra>
 
 #if defined YSI_TESTS
-	#include "..\y_hooks"
+	#include <YSI_Coding\y_hooks>
 	//#include "..\..\YSI_Extra\y_inline_bcrypt"
 	//#include "..\..\YSI_Extra\y_inline_mysql"
 	//#include "..\..\YSI_Extra\y_inline_requests"
-	#include "..\..\YSI_Extra\y_inline_timers"
+	#include <YSI_Extra\y_inline_timers>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning push
 		#pragma warning disable 203
@@ -112,7 +112,7 @@ CHAIN_HOOK(Inline)
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_inline_tests"
+	#include <YSI_Coding\y_inline\y_inline_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif

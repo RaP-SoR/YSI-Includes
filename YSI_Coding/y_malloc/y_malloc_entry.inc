@@ -76,8 +76,8 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_utils"
-#include "..\..\YSI_Server\y_thirdpartyinclude"
+#include <YSI_Core\y_utils>
+#include <YSI_Server\y_thirdpartyinclude>
 
 #if defined YSI_MALLOC_SECURE
 	#error YSI_MALLOC_SECURE has been removed.
@@ -204,8 +204,8 @@ forward Alloc:calloc(size);
 	new
 		YSI_gMallocMemory[1];
 	
-	#include "..\..\YSI_Server\y_thirdpartyinclude"
-	#include "..\y_cgen"
+	#include <YSI_Server\y_thirdpartyinclude>
+	#include <YSI_Coding\y_cgen>
 	
 	// Allocate space on the heap permanently.
 	#if !defined YSI_YES_HEAP_MALLOC
@@ -213,11 +213,11 @@ forward Alloc:calloc(size);
 		#define YSI_YES_HEAP_MALLOC
 	#endif
 	
-	#include "y_malloc_heapalloc"
+	#include <YSI_Coding\y_malloc\y_malloc_heapalloc>
 #endif
 
 // Functions to access the data on the heap.
-#include "y_malloc_funcs"
+#include <YSI_Coding\y_malloc\y_malloc_funcs>
 #if defined YSI_TESTS
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning push
@@ -230,7 +230,7 @@ forward Alloc:calloc(size);
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_malloc_tests"
+	#include <YSI_Coding\y_malloc\y_malloc_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif

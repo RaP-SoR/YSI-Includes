@@ -76,16 +76,16 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_utils"
-#include "..\..\YSI_Coding\y_stringhash"
+#include <YSI_Core\y_utils>
+#include <YSI_Coding\y_stringhash>
 
-#include "y_hashmap_impl"
+#include <YSI_Data\y_hashmap\y_hashmap_impl>
 
 // The hashmap tests are vast.  Only include them when explicitly requested.
 #if defined YSI_TESTS
 	// We need more heap space for one test.  Include this to get it without
 	// potentially breaking other tests.
-	#include "..\..\YSI_Coding\y_malloc"
+	#include <YSI_Coding\y_malloc>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning push
 		#pragma warning disable 203
@@ -97,7 +97,7 @@ Optional plugins:
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_hashmap_tests"
+	#include <YSI_Data\y_hashmap\y_hashmap_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif

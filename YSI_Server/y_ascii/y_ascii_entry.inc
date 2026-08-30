@@ -76,7 +76,7 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_utils"
+#include <YSI_Core\y_utils>
 
 static stock
 	YSI_gsSmallHeader[] = " ========================================== ",
@@ -375,7 +375,7 @@ stock ASCII_EndDisplay(ASCII_BORDER_STYLE:border)
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_ascii_tests"
+	#include <YSI_Server\y_ascii\y_ascii_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif
