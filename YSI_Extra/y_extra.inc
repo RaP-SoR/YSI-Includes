@@ -77,10 +77,10 @@ Optional plugins:
 */
 
 #if !defined _INC_y_extra
-	#tryinclude "y_extra\y_extra_entry"
+	#tryinclude <YSI_Extra\y_extra\y_extra_entry>
 #endif
 #if !defined _INC_y_extra
-	#tryinclude "YSI_Extra\y_extra\y_extra_entry"
+	#tryinclude <YSI_Extra\y_extra\y_extra_entry>
 #endif
 #if !defined _INC_y_extra
 	#tryinclude "YSI\YSI_Extra\y_extra\y_extra_entry"

@@ -76,9 +76,9 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_utils"
+#include <YSI_Core\y_utils>
 
-#include "..\..\YSI_Coding\y_stringhash"
+#include <YSI_Coding\y_stringhash>
 
 #if !defined MAX_TEXT_COLOURS
 	#if defined MAX_TEXT_COLORS
@@ -104,10 +104,10 @@ Optional plugins:
 #define MK_S_DEF(%0)                    ((%0) >>> 8)
 
 #if _YSI_USE_X11
-	#include "y_colours_x11def"
+	#include <YSI_Server\y_colours\y_colours_x11def>
 #endif
 
-#include "y_colours_gtdef"
+#include <YSI_Server\y_colours\y_colours_gtdef>
 
 // Special macro for adding game text colours.
 #define GT(%0) GT_%0
@@ -305,7 +305,7 @@ stock GetColourHash(hash, alpha = 0xAA)
 	// Do the REVERSE hash from YHash
 	#pragma tabsize 4
 	#if _YSI_USE_X11
-		#include "y_colours_x11switch"
+		#include <YSI_Server\y_colours\y_colours_x11switch>
 	#endif
 	#pragma tabsize 4
 	// Do the default code here.
@@ -332,7 +332,7 @@ stock GetColourHash(hash, alpha = 0xAA)
 		// with the "{COLOR}" format, this is to save on memory.  It is in
 		// theory possible to get it working with the hash format using an
 		// incremental hash and compare.  NOW SUPPORTED!
-		#include "y_colours_x11parse"
+		#include <YSI_Server\y_colours\y_colours_x11parse>
 		#pragma tabsize 4
 		return -1;
 	}

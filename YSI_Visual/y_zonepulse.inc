@@ -89,10 +89,10 @@ Optional plugins:
 */
 
 #if !defined _INC_y_zonepulse
-	#tryinclude "y_zonepulse\y_zonepulse_entry"
+	#tryinclude <YSI_Visual\y_zonepulse\y_zonepulse_entry>
 #endif
 #if !defined _INC_y_zonepulse
-	#tryinclude "YSI_Visual\y_zonepulse\y_zonepulse_entry"
+	#tryinclude <YSI_Visual\y_zonepulse\y_zonepulse_entry>
 #endif
 #if !defined _INC_y_zonepulse
 	#tryinclude "YSI\YSI_Visual\y_zonepulse\y_zonepulse_entry"

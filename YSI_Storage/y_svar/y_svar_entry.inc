@@ -82,7 +82,7 @@ Optional plugins:
 	#error Please define "MODE_NAME" before including y_svar.
 #endif
 
-#include "..\..\YSI_Core\y_utils"
+#include <YSI_Core\y_utils>
 
 #if defined SVAR_USE_MYSQL
 	#if _YSI_PLUGINS_MYSQL == 7
@@ -97,10 +97,10 @@ Optional plugins:
 #elseif defined SVAR_USE_SQLITE
 	#include "y_svar_sqlite"
 #else
-	#include "..\y_ini"
-	#include "..\..\YSI_Coding\y_hooks"
+	#include <YSI_Storage\y_ini>
+	#include <YSI_Coding\y_hooks>
 	
-	#include "y_svar_ini"
+	#include <YSI_Storage\y_svar\y_svar_ini>
 #endif
 #if defined YSI_TESTS
 	#if defined YSI_NO_TEST_WARNINGS
@@ -114,7 +114,7 @@ Optional plugins:
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_svar_tests"
+	#include <YSI_Storage\y_svar\y_svar_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif

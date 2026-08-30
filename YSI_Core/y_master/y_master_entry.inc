@@ -74,18 +74,18 @@ Optional plugins:
 #define _Y_MASTER_INCLUDED
 
 #if !defined _INC_y_master
-	#include "..\y_utils"
-	#include "..\..\YSI_Server\y_thirdpartyinclude\y3_codeparse"
+	#include <YSI_Core\y_utils>
+	#include <YSI_Server\y_thirdpartyinclude\y3_codeparse>
 
 	CHAIN_HOOK(Master)
 	#undef CHAIN_ORDER
 	#define CHAIN_ORDER CHAIN_NEXT(Master)
 	
 	#if !defined YSI_NO_MASTER
-		#include "..\y_core\y_rconfix"
+		#include <YSI_Core\y_core\y_rconfix>
 	#endif
-	#include "y_master_once"
-	#include "y_distribute"
+	#include <YSI_Core\y_master\y_master_once>
+	#include <YSI_Core\y_master\y_distribute>
 #endif
 
 // ALWAYS!  The compiler defines this automatically, don't use it as this is
@@ -97,11 +97,11 @@ Optional plugins:
 #if defined MASTER
 	#if defined _MASTER
 		// Store the last master.
-		#include "y_master__push_master"
+		#include <YSI_Core\y_master\y_master__push_master>
 	#endif
 #else
 	// Get the previous master (or 0 by default).
-	#include "y_master__pop_master"
+	#include <YSI_Core\y_master\y_master__pop_master>
 	
 	// Useful debug information (isn't compiled, but shows up with "-l").
 	Debug_CodeX{static stock const _POPPED_MASTER = MASTER;}
@@ -119,25 +119,25 @@ Optional plugins:
 
 #if defined _INC_y_master
 	// Run at least once - clear previous data.
-	#include "y_master__cleanup"
+	#include <YSI_Core\y_master\y_master__cleanup>
 #endif
 
 // Initialise the current master if it hasn't already been done.  This is split
 // in to 5 parts to reduce compilation times in the common case of not that many
 // master systems.
 #if     MASTER < 16
-	#include "y_master__setup_master_A"
+	#include <YSI_Core\y_master\y_master__setup_master_A>
 #elseif MASTER < 32
-	#include "y_master__setup_master_B"
+	#include <YSI_Core\y_master\y_master__setup_master_B>
 #elseif MASTER < 48
-	#include "y_master__setup_master_C"
+	#include <YSI_Core\y_master\y_master__setup_master_C>
 #else
-	#include "y_master__setup_master_D"
+	#include <YSI_Core\y_master\y_master__setup_master_D>
 #endif
 #undef MASTER
 
 // Include all the correct macro versions for the settings we have just found.
-#include "y_master__impl"
+#include <YSI_Core\y_master\y_master__impl>
 
 #if defined _INC_y_master
 	#endinput
@@ -186,10 +186,10 @@ Optional plugins:
 
 // Only include this lot once.
 #if defined YSI_TESTS
-	#include "..\..\YSI_Coding\y_hooks"
+	#include <YSI_Coding\y_hooks>
 	// Get the new master.
 	#define MASTER 58
-	#include "y_master_entry"
+	#include <YSI_Core\y_master\y_master_entry>
 	// Include the tests.
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning push
@@ -202,16 +202,16 @@ Optional plugins:
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_master_tests"
+	#include <YSI_Core\y_master\y_master_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif
 	// Pop the master.
-	#include "y_master_entry"
+	#include <YSI_Core\y_master\y_master_entry>
 
 	#define MASTER 57
 	#define YSIM_U_ENABLE
-	#include "y_master_entry"
+	#include <YSI_Core\y_master\y_master_entry>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning push
 		#pragma warning disable 203
@@ -223,11 +223,11 @@ Optional plugins:
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_master_module_tests"
+	#include <YSI_Core\y_master\y_master_module_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif
-	#include "y_master_entry"
+	#include <YSI_Core\y_master\y_master_entry>
 #elseif defined YSIM_TEST_MODULE
 	#if YSIM_TEST_MODULE == 1
 	
@@ -247,9 +247,9 @@ Optional plugins:
 	*/
 
 		#define MASTER 57
-		#include "y_master_entry"
-		#include "y_master_module_funcs"
-		#include "y_master_entry"
+		#include <YSI_Core\y_master\y_master_entry>
+		#include <YSI_Core\y_master\y_master_module_funcs>
+		#include <YSI_Core\y_master\y_master_entry>
 	#elseif YSIM_TEST_MODULE == 2
 	
 	/*
@@ -270,9 +270,9 @@ Optional plugins:
 
 		#define MASTER 57
 		#define YSIM_S_ENABLE
-		#include "y_master_entry"
-		#include "y_master_module_funcs"
-		#include "y_master_entry"
+		#include <YSI_Core\y_master\y_master_entry>
+		#include <YSI_Core\y_master\y_master_module_funcs>
+		#include <YSI_Core\y_master\y_master_entry>
 	#elseif YSIM_TEST_MODULE == 3
 	
 	/*
@@ -292,9 +292,9 @@ Optional plugins:
 
 		#define MASTER 57
 		#define YSIM_C_ENABLE
-		#include "y_master_entry"
-		#include "y_master_module_funcs"
-		#include "y_master_entry"
+		#include <YSI_Core\y_master\y_master_entry>
+		#include <YSI_Core\y_master\y_master_module_funcs>
+		#include <YSI_Core\y_master\y_master_entry>
 	#elseif YSIM_TEST_MODULE == 4
 	
 	/*
@@ -315,9 +315,9 @@ Optional plugins:
 
 		#define MASTER 57
 		#define YSIM_VERSION 8
-		#include "y_master_entry"
-		#include "y_master_module_funcs"
-		#include "y_master_entry"
+		#include <YSI_Core\y_master\y_master_entry>
+		#include <YSI_Core\y_master\y_master_module_funcs>
+		#include <YSI_Core\y_master\y_master_entry>
 	#endif
 #endif
 

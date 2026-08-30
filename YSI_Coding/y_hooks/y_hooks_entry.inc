@@ -76,9 +76,9 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_utils"
-#include "..\..\YSI_Server\y_thirdpartyinclude"
-#include "..\y_cgen"
+#include <YSI_Core\y_utils>
+#include <YSI_Server\y_thirdpartyinclude>
+#include <YSI_Coding\y_cgen>
 
 #if defined YSI_TESTS
 	#define _Y_HOOKS_STATIC
@@ -92,13 +92,13 @@ Optional plugins:
 
 #define Y_HOOKS_MAX_NAME (__COMPILER_sNAMEMAX * 2 + 1)
 
-#include "y_hooks_macros"
-#include "y_hooks_impl"
+#include <YSI_Coding\y_hooks\y_hooks_macros>
+#include <YSI_Coding\y_hooks\y_hooks_impl>
 
 #if defined YSI_TESTS
 	// Get a new unique ID for the test hooks.
-	#include "..\y_va"
-	#include "..\y_unique\y_unique_entry"
+	#include <YSI_Coding\y_va>
+	#include <YSI_Coding\y_unique\y_unique_entry>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning push
 		#pragma warning disable 203
@@ -110,7 +110,7 @@ Optional plugins:
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_hooks_tests"
+	#include <YSI_Coding\y_hooks\y_hooks_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif

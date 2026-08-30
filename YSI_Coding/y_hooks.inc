@@ -76,10 +76,10 @@ Optional plugins:
 #endif
 
 #if !defined _Y_UNIQUE_INCLUDED
-	#tryinclude "..\YSI_Coding\y_unique\y_unique_entry"
+	#tryinclude <YSI_Coding\y_unique\y_unique_entry>
 #endif
 #if !defined _Y_UNIQUE_INCLUDED
-	#tryinclude "YSI_Coding\y_unique\y_unique_entry"
+	#tryinclude <YSI_Coding\y_unique\y_unique_entry>
 #endif
 #if !defined _Y_UNIQUE_INCLUDED
 	#tryinclude "YSI\YSI_Coding\y_unique\y_unique_entry"
@@ -93,7 +93,7 @@ Optional plugins:
 #if defined _Y_UNIQUE_INCLUDED
 	#undef _Y_UNIQUE_INCLUDED
 #else
-	#error Did you use `YSI_Coding/y_hooks` instead of `YSI_Coding\y_hooks`?
+	#error Could not find y_unique (required by y_hooks). On Linux, compile with -Z+.
 #endif
 
 #if defined _INC_y_hooks
@@ -117,10 +117,10 @@ Optional plugins:
  *//** */
 
 #if !defined _INC_y_hooks
-	#tryinclude "y_hooks\y_hooks_entry"
+	#tryinclude <YSI_Coding\y_hooks\y_hooks_entry>
 #endif
 #if !defined _INC_y_hooks
-	#tryinclude "YSI_Coding\y_hooks\y_hooks_entry"
+	#tryinclude <YSI_Coding\y_hooks\y_hooks_entry>
 #endif
 #if !defined _INC_y_hooks
 	#tryinclude "YSI\YSI_Coding\y_hooks\y_hooks_entry"

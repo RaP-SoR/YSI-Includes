@@ -96,12 +96,12 @@ Optional plugins:
 	// The fixes.inc pawndoc cleverness is already defined, we don't need to
 	// duplicate it here, just clear some spaces in the XML hidden output to
 	// show some YSI functions.
-	#include "y_pawndoc_with_fixes"
+	#include <YSI_Core\y_core\y_pawndoc_with_fixes>
 #else
 	// The fixes.inc pawndoc cleverness is not already defined, we don't need to
 	// modify it here.  Instead, this file just copies the whole thing
 	// wholesale (I wrote it, I give myself permission to copy it).
-	#include "y_pawndoc_without_fixes"
+	#include <YSI_Core\y_core\y_pawndoc_without_fixes>
 #endif
 
 // YSI internal versions of the pawndoc macros.

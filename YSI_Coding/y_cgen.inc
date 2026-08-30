@@ -90,10 +90,10 @@ Optional plugins:
 */
 
 #if !defined _INC_y_cgen
-	#tryinclude "y_cgen\y_cgen_entry"
+	#tryinclude <YSI_Coding\y_cgen\y_cgen_entry>
 #endif
 #if !defined _INC_y_cgen
-	#tryinclude "YSI_Coding\y_cgen\y_cgen_entry"
+	#tryinclude <YSI_Coding\y_cgen\y_cgen_entry>
 #endif
 #if !defined _INC_y_cgen
 	#tryinclude "YSI\YSI_Coding\y_cgen\y_cgen_entry"

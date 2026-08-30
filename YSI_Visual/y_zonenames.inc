@@ -80,10 +80,10 @@ Optional plugins:
 */
 
 #if !defined _INC_y_zonenames
-	#tryinclude "y_zonenames\y_zonenames_entry"
+	#tryinclude <YSI_Visual\y_zonenames\y_zonenames_entry>
 #endif
 #if !defined _INC_y_zonenames
-	#tryinclude "YSI_Visual\y_zonenames\y_zonenames_entry"
+	#tryinclude <YSI_Visual\y_zonenames\y_zonenames_entry>
 #endif
 #if !defined _INC_y_zonenames
 	#tryinclude "YSI\YSI_Visual\y_zonenames\y_zonenames_entry"

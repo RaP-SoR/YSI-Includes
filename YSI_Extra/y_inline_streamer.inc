@@ -73,10 +73,10 @@ Optional plugins:
 */
 
 #if !defined _INC_y_inline
-	#tryinclude "..\YSI_Coding\y_inline\y_inline_entry"
+	#tryinclude <YSI_Coding\y_inline\y_inline_entry>
 #endif
 #if !defined _INC_y_inline
-	#tryinclude "YSI_Coding\y_inline\y_inline_entry"
+	#tryinclude <YSI_Coding\y_inline\y_inline_entry>
 #endif
 #if !defined _INC_y_inline
 	#tryinclude "YSI\YSI_Coding\y_inline\y_inline_entry"
@@ -457,10 +457,10 @@ stock bool:YSI_Streamer_RemoveFloatData(STREAMER_TYPE:type, STREAMER_ALL_TAGS:id
 	}
 #else
 	#if !defined _INC_y_sparsearray
-		#tryinclude "..\YSI_Data\y_sparsearray\y_sparsearray_entry"
+		#tryinclude <YSI_Data\y_sparsearray\y_sparsearray_entry>
 	#endif
 	#if !defined _INC_y_sparsearray
-		#tryinclude "YSI_Data\y_sparsearray\y_sparsearray_entry"
+		#tryinclude <YSI_Data\y_sparsearray\y_sparsearray_entry>
 	#endif
 	#if !defined _INC_y_sparsearray
 		#tryinclude "YSI\YSI_Data\y_sparsearray\y_sparsearray_entry"

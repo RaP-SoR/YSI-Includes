@@ -90,10 +90,10 @@ Optional plugins:
 */
 
 #if !defined _INC_y_files
-	#tryinclude "y_files\y_files_entry"
+	#tryinclude <YSI_Server\y_files\y_files_entry>
 #endif
 #if !defined _INC_y_files
-	#tryinclude "YSI_Server\y_files\y_files_entry"
+	#tryinclude <YSI_Server\y_files\y_files_entry>
 #endif
 #if !defined _INC_y_files
 	#tryinclude "YSI\YSI_Server\y_files\y_files_entry"

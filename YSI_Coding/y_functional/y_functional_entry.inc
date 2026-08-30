@@ -76,12 +76,12 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_utils"
-#include "..\y_inline"
+#include <YSI_Core\y_utils>
+#include <YSI_Coding\y_inline>
 
-#include "y_functional_impl"
-#include "y_functional_funcs"
-#include "y_functional_rewrite"
+#include <YSI_Coding\y_functional\y_functional_impl>
+#include <YSI_Coding\y_functional\y_functional_funcs>
+#include <YSI_Coding\y_functional\y_functional_rewrite>
 
 #if defined YSI_TESTS
 	#if defined YSI_NO_TEST_WARNINGS
@@ -95,7 +95,7 @@ Optional plugins:
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_functional_tests"
+	#include <YSI_Coding\y_functional\y_functional_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif

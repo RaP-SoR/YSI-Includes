@@ -76,11 +76,11 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_utils"
-#include "y_circular_impl"
+#include <YSI_Core\y_utils>
+#include <YSI_Data\y_circular\y_circular_impl>
 
 #if defined YSI_TESTS
-	#include "..\y_iterate"
+	#include <YSI_Data\y_iterate>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning push
 		#pragma warning disable 203
@@ -92,7 +92,7 @@ Optional plugins:
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_circular_tests"
+	#include <YSI_Data\y_circular\y_circular_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif

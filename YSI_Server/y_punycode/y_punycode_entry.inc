@@ -76,7 +76,7 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_utils"
+#include <YSI_Core\y_utils>
 
 #define PUNY_BASE (36)
 #define PUNY_CHAR ('-')
@@ -579,7 +579,7 @@ static stock Puny_Adapt(delta, length, bool:firstTime)
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_punycode_tests"
+	#include <YSI_Server\y_punycode\y_punycode_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif

@@ -96,10 +96,10 @@ Optional plugins:
 */
 
 #if !defined _INC_y_timers
-	#tryinclude "y_timers\y_timers_entry"
+	#tryinclude <YSI_Coding\y_timers\y_timers_entry>
 #endif
 #if !defined _INC_y_timers
-	#tryinclude "YSI_Coding\y_timers\y_timers_entry"
+	#tryinclude <YSI_Coding\y_timers\y_timers_entry>
 #endif
 #if !defined _INC_y_timers
 	#tryinclude "YSI\YSI_Coding\y_timers\y_timers_entry"

@@ -94,10 +94,10 @@ Optional plugins:
 #endif
 
 #if !defined _INC_y_percent
-	#tryinclude "y_percent\y_percent_entry"
+	#tryinclude <YSI_Data\y_percent\y_percent_entry>
 #endif
 #if !defined _INC_y_percent
-	#tryinclude "YSI_Data\y_percent\y_percent_entry"
+	#tryinclude <YSI_Data\y_percent\y_percent_entry>
 #endif
 #if !defined _INC_y_percent
 	#tryinclude "YSI\YSI_Data\y_percent\y_percent_entry"

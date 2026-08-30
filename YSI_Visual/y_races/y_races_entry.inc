@@ -76,7 +76,7 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_utils"
+#include <YSI_Core\y_utils>
 
 #if !defined YSI_NO_RACE_POSITION && !defined RACE_POSITION
 	#define RACE_POSITION
@@ -88,12 +88,12 @@ Optional plugins:
 	#define _Y_RACES_STATIC static
 #endif
 
-#include "..\..\YSI_Players\y_text"
-#include "..\..\YSI_Data\y_bit"
-#include "..\..\YSI_Data\y_iterate"
-#include "..\..\YSI_Data\y_playerarray"
+#include <YSI_Players\y_text>
+#include <YSI_Data\y_bit>
+#include <YSI_Data\y_iterate>
+#include <YSI_Data\y_playerarray>
 #if defined RACE_POSITION
-	#include "..\..\YSI_Coding\y_timers"
+	#include <YSI_Coding\y_timers>
 #endif
 
 #if !defined MAX_RACES
@@ -103,13 +103,13 @@ Optional plugins:
 #define Y_RACES_GROUP_NAME<%0...%1> %0Race%1
 #define Y_RACES_GROUP_LIMIT         MAX_RACES
 #define Y_RACES_GROUP_TAG           _
-#include "..\..\YSI_Players\y_groups\y_groups__include"
+#include <YSI_Players\y_groups\y_groups__include>
 
 #define MASTER 53
 #define YSIM_U_DISABLE
-#include "..\..\YSI_Core\y_master"
+#include <YSI_Core\y_master>
 
-#include "..\..\YSI_Coding\y_hooks"
+#include <YSI_Coding\y_hooks>
 
 stock _YSI_HAS_y_races(_do_not_call_me_ever_, _like_never_)
 {
@@ -142,7 +142,7 @@ FOREIGN__ Race_GetPlayerRaceTime(playerid);
 FOREIGN__ Race_GetPlayerRace(playerid);
 FOREIGN__ Race_SetPlayer(race, playerid, bool:set);
 
-#include "y_races_impl"
+#include <YSI_Visual\y_races\y_races_impl>
 #if defined YSI_TESTS
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning push
@@ -155,7 +155,7 @@ FOREIGN__ Race_SetPlayer(race, playerid, bool:set);
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_races_tests"
+	#include <YSI_Visual\y_races\y_races_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif
@@ -165,5 +165,5 @@ FOREIGN__ Race_SetPlayer(race, playerid, bool:set);
 //#undef _GROUP_MAKE_LIMIT
 //#undef _GROUP_MAKE_NAME
 
-#include "..\..\YSI_Core\y_master"
+#include <YSI_Core\y_master>
 

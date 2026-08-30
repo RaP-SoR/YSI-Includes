@@ -2,6 +2,8 @@
 
 Use sampctl!
 
+On Linux, pawncc needs `-Z+` (sampctl already passes this in typical `pawn.json` builds). Without it, YSI's backslash include paths cannot be opened.
+
 ## With *sampctl*
 
 ```

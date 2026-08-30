@@ -97,7 +97,7 @@ Optional plugins:
 #if YSI_MAX_STRING != 144
 	//#error Please update all explicit YSI_MAX_STRING uses.
 	#define Y_COMPILERDATA_WARNING 3
-	#include "y_compilerdata_warning"
+	#include <YSI_Core\y_core\y_compilerdata_warning>
 #endif
 
 #if !defined YSIM_STRING

@@ -76,9 +76,9 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_utils"
+#include <YSI_Core\y_utils>
 
-#include "y_jaggedarray_impl"
+#include <YSI_Data\y_jaggedarray\y_jaggedarray_impl>
 
 #if defined YSI_TESTS
 	#if defined YSI_NO_TEST_WARNINGS
@@ -92,7 +92,7 @@ Optional plugins:
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_jaggedarray_tests"
+	#include <YSI_Data\y_jaggedarray\y_jaggedarray_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif

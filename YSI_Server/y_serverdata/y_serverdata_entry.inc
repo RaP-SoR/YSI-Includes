@@ -146,12 +146,12 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_core\y_core_entry"
-#include "..\..\YSI_Coding\y_va"
+#include <YSI_Core\y_core\y_core_entry>
+#include <YSI_Coding\y_va>
 
 #define MASTER 54
 #define YSIM_U_DISABLE
-#include "..\..\YSI_Core\y_master"
+#include <YSI_Core\y_master>
 
 forward R__(const data[], length);
 
@@ -603,11 +603,11 @@ stock Server_UnloadRconFix() <_ALS : _ALS_go>
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_serverdata_tests"
+	#include <YSI_Server\y_serverdata\y_serverdata_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif
 #endif
 
-#include "..\..\YSI_Core\y_master"
+#include <YSI_Core\y_master>
 

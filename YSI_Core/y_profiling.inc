@@ -90,7 +90,7 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "y_debug"
+#include <YSI_Core\y_debug>
 
 CHAIN_HOOK(Profiling)
 #undef CHAIN_ORDER
@@ -190,9 +190,9 @@ CHAIN_HOOK(Profiling)
 #define P@y_%0\32; P@y_
 
 // These all need to come AFTER the types are defined in case the have profilings.
-#include "y_utils"
+#include <YSI_Core\y_utils>
 
-#include "..\YSI_Coding\y_va"
+#include <YSI_Coding\y_va>
 
 #define Y_PROFILING_PROFILE_SEARCH _A<@y_P>
 #define Y_PROFILING_INIT _C<@yP_>

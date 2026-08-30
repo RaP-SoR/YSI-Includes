@@ -90,7 +90,7 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_utils"
-#include "..\..\YSI_Server\y_thirdpartyinclude"
-#include "y_cgen_impl"
+#include <YSI_Core\y_utils>
+#include <YSI_Server\y_thirdpartyinclude>
+#include <YSI_Coding\y_cgen\y_cgen_impl>
 

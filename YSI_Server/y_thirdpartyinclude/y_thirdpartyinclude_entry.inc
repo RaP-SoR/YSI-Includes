@@ -90,19 +90,19 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_utils"
+#include <YSI_Core\y_utils>
 
 #if __COMPILER_WARNING_SUPPRESSION
 	#pragma warning push
 	#pragma warning disable 231
 #endif
 
-#include "y3_addressof"
-#include "y3_amx_assembly"
-#include "y3_formatex"
-#include "y3_md_sort"
-#include "y3_codeparse"
-#include "y3_indirection"
+#include <YSI_Server\y_thirdpartyinclude\y3_addressof>
+#include <YSI_Server\y_thirdpartyinclude\y3_amx_assembly>
+#include <YSI_Server\y_thirdpartyinclude\y3_formatex>
+#include <YSI_Server\y_thirdpartyinclude\y3_md_sort>
+#include <YSI_Server\y_thirdpartyinclude\y3_codeparse>
+#include <YSI_Server\y_thirdpartyinclude\y3_indirection>
 
 // "y_thirdpartyinclude_tests" is NOT included here when tests are active, because it complicates
 // dependency orders massively!
@@ -111,7 +111,7 @@ Optional plugins:
 	#pragma warning pop
 #endif
 
-#include "..\..\YSI_Storage\y_dumpamx\y_dumpamx_entry"
+#include <YSI_Storage\y_dumpamx\y_dumpamx_entry>
 
 #if defined YSI_TESTS
 	#if defined YSI_NO_TEST_WARNINGS
@@ -125,7 +125,7 @@ Optional plugins:
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_thirdpartyinclude_tests"
+	#include <YSI_Server\y_thirdpartyinclude\y_thirdpartyinclude_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif

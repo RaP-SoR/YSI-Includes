@@ -83,7 +83,7 @@ Optional plugins:
 	#else
 		#define _YCM_@W
 		// Save the settings.
-		#include "y_master__resolve"
+		#include <YSI_Core\y_master\y_master__resolve>
 		#if !YSIM_HAS_MASTER
 			#define YSIM_RECALL_48 0
 		#elseif _YSIM_IS_CLIENT
@@ -110,7 +110,7 @@ Optional plugins:
 	#else
 		#define _YCM_@X
 		// Save the settings.
-		#include "y_master__resolve"
+		#include <YSI_Core\y_master\y_master__resolve>
 		#if !YSIM_HAS_MASTER
 			#define YSIM_RECALL_49 0
 		#elseif _YSIM_IS_CLIENT
@@ -137,7 +137,7 @@ Optional plugins:
 	#else
 		#define _YCM_@Y
 		// Save the settings.
-		#include "y_master__resolve"
+		#include <YSI_Core\y_master\y_master__resolve>
 		#if !YSIM_HAS_MASTER
 			#define YSIM_RECALL_50 0
 		#elseif _YSIM_IS_CLIENT
@@ -164,7 +164,7 @@ Optional plugins:
 	#else
 		#define _YCM_@Z
 		// Save the settings.
-		#include "y_master__resolve"
+		#include <YSI_Core\y_master\y_master__resolve>
 		#if !YSIM_HAS_MASTER
 			#define YSIM_RECALL_51 0
 		#elseif _YSIM_IS_CLIENT
@@ -191,7 +191,7 @@ Optional plugins:
 	#else
 		#define _YCM_@0
 		// Save the settings.
-		#include "y_master__resolve"
+		#include <YSI_Core\y_master\y_master__resolve>
 		#if !YSIM_HAS_MASTER
 			#define YSIM_RECALL_52 0
 		#elseif _YSIM_IS_CLIENT
@@ -218,7 +218,7 @@ Optional plugins:
 	#else
 		#define _YCM_@1
 		// Save the settings.
-		#include "y_master__resolve"
+		#include <YSI_Core\y_master\y_master__resolve>
 		#if !YSIM_HAS_MASTER
 			#define YSIM_RECALL_53 0
 		#elseif _YSIM_IS_CLIENT
@@ -245,7 +245,7 @@ Optional plugins:
 	#else
 		#define _YCM_@2
 		// Save the settings.
-		#include "y_master__resolve"
+		#include <YSI_Core\y_master\y_master__resolve>
 		#if !YSIM_HAS_MASTER
 			#define YSIM_RECALL_54 0
 		#elseif _YSIM_IS_CLIENT
@@ -272,7 +272,7 @@ Optional plugins:
 	#else
 		#define _YCM_@3
 		// Save the settings.
-		#include "y_master__resolve"
+		#include <YSI_Core\y_master\y_master__resolve>
 		#if !YSIM_HAS_MASTER
 			#define YSIM_RECALL_55 0
 		#elseif _YSIM_IS_CLIENT
@@ -299,7 +299,7 @@ Optional plugins:
 	#else
 		#define _YCM_@4
 		// Save the settings.
-		#include "y_master__resolve"
+		#include <YSI_Core\y_master\y_master__resolve>
 		#if !YSIM_HAS_MASTER
 			#define YSIM_RECALL_56 0
 		#elseif _YSIM_IS_CLIENT
@@ -326,7 +326,7 @@ Optional plugins:
 	#else
 		#define _YCM_@5
 		// Save the settings.
-		#include "y_master__resolve"
+		#include <YSI_Core\y_master\y_master__resolve>
 		#if !YSIM_HAS_MASTER
 			#define YSIM_RECALL_57 0
 		#elseif _YSIM_IS_CLIENT
@@ -353,7 +353,7 @@ Optional plugins:
 	#else
 		#define _YCM_@6
 		// Save the settings.
-		#include "y_master__resolve"
+		#include <YSI_Core\y_master\y_master__resolve>
 		#if !YSIM_HAS_MASTER
 			#define YSIM_RECALL_58 0
 		#elseif _YSIM_IS_CLIENT
@@ -380,7 +380,7 @@ Optional plugins:
 	#else
 		#define _YCM_@7
 		// Save the settings.
-		#include "y_master__resolve"
+		#include <YSI_Core\y_master\y_master__resolve>
 		#if !YSIM_HAS_MASTER
 			#define YSIM_RECALL_59 0
 		#elseif _YSIM_IS_CLIENT
@@ -407,7 +407,7 @@ Optional plugins:
 	#else
 		#define _YCM_@8
 		// Save the settings.
-		#include "y_master__resolve"
+		#include <YSI_Core\y_master\y_master__resolve>
 		#if !YSIM_HAS_MASTER
 			#define YSIM_RECALL_60 0
 		#elseif _YSIM_IS_CLIENT
@@ -434,7 +434,7 @@ Optional plugins:
 	#else
 		#define _YCM_@9
 		// Save the settings.
-		#include "y_master__resolve"
+		#include <YSI_Core\y_master\y_master__resolve>
 		#if !YSIM_HAS_MASTER
 			#define YSIM_RECALL_61 0
 		#elseif _YSIM_IS_CLIENT

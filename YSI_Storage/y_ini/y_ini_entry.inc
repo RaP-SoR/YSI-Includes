@@ -76,7 +76,7 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_utils"
+#include <YSI_Core\y_utils>
 
 #define MAX_INI_LINE                    (MAX_INI_ENTRY_NAME + MAX_INI_ENTRY_TEXT + 32)
 
@@ -117,8 +117,8 @@ stock const
 
 #define INI_NO_FILE (INI:-1)
 
-#include "..\..\YSI_Coding\y_inline"
-#include "..\..\YSI_Coding\y_stringhash"
+#include <YSI_Coding\y_inline>
+#include <YSI_Coding\y_stringhash>
 
 #if defined YSI_TESTS
 	#define _Y_INI_STATIC
@@ -126,9 +126,9 @@ stock const
 	#define _Y_INI_STATIC static
 #endif
 
-#include "..\..\YSI_Coding\y_hooks"
+#include <YSI_Coding\y_hooks>
 
-#include "y_ini_impl"
+#include <YSI_Storage\y_ini\y_ini_impl>
 
 #if defined YSI_TESTS
 	#tryinclude <amx\os>
@@ -160,7 +160,7 @@ stock const
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_ini_tests"
+	#include <YSI_Storage\y_ini\y_ini_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif

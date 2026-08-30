@@ -128,18 +128,18 @@ const YSI_VERSION_BCD = (YSI_VERSION_MAJOR << 24) | (YSI_VERSION_MINOR << 16) | 
 #endif
 
 // Completely stand-alone code.
-#include "y_const_correct"
+#include <YSI_Core\y_core\y_const_correct>
 
 // The most first include, since it determines compiler settings that might be
 // used by literally any other include.
-#include "..\..\YSI_Server\y_thirdpartyinclude\y3_addressof"
-#include "y_interning"
-#include "y_emit"
-#include "y_compilerdata"
+#include <YSI_Server\y_thirdpartyinclude\y3_addressof>
+#include <YSI_Core\y_core\y_interning>
+#include <YSI_Core\y_core\y_emit>
+#include <YSI_Core\y_core\y_compilerdata>
 
 // The second include, because it sets up comments in all the others and has no
 // non-standard code.  Needs compiler pass information though.
-#include "y_pawndoc"
+#include <YSI_Core\y_core\y_pawndoc>
 
 // Avoid an error with `forward OnRuntimeError(code, &bool:suppress);` in here after already ALS
 // hooking it (#266).
@@ -352,15 +352,15 @@ stock File:YSI_FOpen__(const filename[], filemode:mode = io_readwrite)
 
 // These three includes are just defines.  They declare no code at all, only
 // variables.
-#include "y_globaltags"
-#include "y_prehook"
-#include "y_stripnumbers"
+#include <YSI_Core\y_core\y_globaltags>
+#include <YSI_Core\y_core\y_prehook>
+#include <YSI_Core\y_core\y_stripnumbers>
 
-#include "y_shortvar"
-#include "y_samp_natives"
+#include <YSI_Core\y_core\y_shortvar>
+#include <YSI_Core\y_core\y_samp_natives>
 
-#include "y_pp"
-#include "y_als_impl"
+#include <YSI_Core\y_core\y_pp>
+#include <YSI_Core\y_core\y_als_impl>
 
 // A few nicely named short strings used for properties.
 #define YSIM_MASTER #M
@@ -402,10 +402,10 @@ stock const YSIM_VERMAX[] = "X";
 
 // New create the `OnScriptInit` and `OnCodeInit` callbacks, which many YSI
 // includes use to start themselves.
-#include "y_scriptinit_impl"
+#include <YSI_Core\y_core\y_scriptinit_impl>
 
 // The ever loved `y_version`.
-#include "y_version"
+#include <YSI_Core\y_core\y_version>
 
 #if defined YSI_TESTS
 	#define _Y_CORE_STATIC
@@ -414,16 +414,16 @@ stock const YSIM_VERMAX[] = "X";
 #endif
 
 // More common utilities and user-facing functions.
-#include "y_debug_impl"
+#include <YSI_Core\y_core\y_debug_impl>
 #if cellbits == 32
-	#include "y_cell32"
+	#include <YSI_Core\y_core\y_cell32>
 #else
-	#include "y_cell64"
+	#include <YSI_Core\y_core\y_cell64>
 #endif
-#include "y_cell_impl"
-#include "y_amx_impl"
-#include "y_shortfunc"
-#include "..\..\YSI_Players\y_android\y_android_entry"
+#include <YSI_Core\y_core\y_cell_impl>
+#include <YSI_Core\y_core\y_amx_impl>
+#include <YSI_Core\y_core\y_shortfunc>
+#include <YSI_Players\y_android\y_android_entry>
 
 /*-------------------------------------------------------------------------*//**
  * <remarks>
@@ -488,20 +488,20 @@ public Y_Less_says_ta_for_using_YSI()
 	#endif
 #endif
 
-#include "../y_utils/y_utils_misc"
-#include "../y_utils/y_utils_maths"
-#include "../y_utils/y_utils_varargs"
-#include "../y_utils/y_utils_arrays"
-#include "../y_utils/y_utils_colour"
-#include "../y_utils/y_utils_conversions"
-#include "../y_utils/y_utils_encodings"
-#include "../y_utils/y_utils_strings"
-#include "../y_utils/y_utils_files"
-#include "../y_utils/y_utils_ip"
-#include "../y_utils/y_utils_names"
-#include "../y_utils/y_utils_random"
-#include "../y_utils/y_utils_similarity"
-#include "../y_utils/y_utils_textwrap"
+#include <YSI_Core\y_utils\y_utils_misc>
+#include <YSI_Core\y_utils\y_utils_maths>
+#include <YSI_Core\y_utils\y_utils_varargs>
+#include <YSI_Core\y_utils\y_utils_arrays>
+#include <YSI_Core\y_utils\y_utils_colour>
+#include <YSI_Core\y_utils\y_utils_conversions>
+#include <YSI_Core\y_utils\y_utils_encodings>
+#include <YSI_Core\y_utils\y_utils_strings>
+#include <YSI_Core\y_utils\y_utils_files>
+#include <YSI_Core\y_utils\y_utils_ip>
+#include <YSI_Core\y_utils\y_utils_names>
+#include <YSI_Core\y_utils\y_utils_random>
+#include <YSI_Core\y_utils\y_utils_similarity>
+#include <YSI_Core\y_utils\y_utils_textwrap>
 
 /*-------------------------------------------------------------------------*//**
  * <library>y_scriptinit</library>
@@ -715,11 +715,11 @@ stock _YSI_ConstMod(const &var, const val)
 
 // These are conditional, and use most of the preceeding code.
 #if defined YSI_TESTS
-	#include "..\y_testing"
+	#include <YSI_Core\y_testing>
 #endif
 
 #if defined YSI_YES_MODE_CACHE
-	#include "..\..\YSI_Server\y_thirdpartyinclude\y_thirdpartyinclude_entry"
+	#include <YSI_Server\y_thirdpartyinclude\y_thirdpartyinclude_entry>
 #endif
 
 /*-------------------------------------------------------------------------*//**

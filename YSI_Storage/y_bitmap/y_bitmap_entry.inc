@@ -76,11 +76,11 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_utils"
-#include "..\..\YSI_Data\y_bit"
-#include "..\..\YSI_Coding\y_malloc"
+#include <YSI_Core\y_utils>
+#include <YSI_Data\y_bit>
+#include <YSI_Coding\y_malloc>
 // Because having colours is always good...
-#include "..\..\YSI_Server\y_colours"
+#include <YSI_Server\y_colours>
 
 #if defined YSI_MALLOC_SECURE
 	#error y_bitmap does not (well) work with YSI_MALLOC_SECURE.
@@ -111,15 +111,15 @@ stock
 		0,  0, 0, 0   // biClrImportant  (Unused).
 	};
 
-#include "y_bitmap_impl"
-#include "y_bitmap_fonts"
-#include "y_bitmap_blending"
-#include "y_bitmap_subpixel"
-#include "y_bitmap_patterns"
-#include "y_bitmap_shapes"
+#include <YSI_Storage\y_bitmap\y_bitmap_impl>
+#include <YSI_Storage\y_bitmap\y_bitmap_fonts>
+#include <YSI_Storage\y_bitmap\y_bitmap_blending>
+#include <YSI_Storage\y_bitmap\y_bitmap_subpixel>
+#include <YSI_Storage\y_bitmap\y_bitmap_patterns>
+#include <YSI_Storage\y_bitmap\y_bitmap_shapes>
 
-#include "y_bitmap_read"
-#include "y_bitmap_write"
+#include <YSI_Storage\y_bitmap\y_bitmap_read>
+#include <YSI_Storage\y_bitmap\y_bitmap_write>
 
 // Hide the variables.
 #define _YSI_g_sFileHeader
@@ -137,7 +137,7 @@ stock
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_bitmap_tests"
+	#include <YSI_Storage\y_bitmap\y_bitmap_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif

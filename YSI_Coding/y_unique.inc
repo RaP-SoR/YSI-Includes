@@ -90,10 +90,10 @@ Optional plugins:
 #endif
 
 #if !defined _Y_UNIQUE_INCLUDED
-	#tryinclude "y_unique\y_unique_entry"
+	#tryinclude <YSI_Coding\y_unique\y_unique_entry>
 #endif
 #if !defined _Y_UNIQUE_INCLUDED
-	#tryinclude "YSI_Coding\y_unique\y_unique_entry"
+	#tryinclude <YSI_Coding\y_unique\y_unique_entry>
 #endif
 #if !defined _Y_UNIQUE_INCLUDED
 	#tryinclude "YSI\YSI_Coding\y_unique\y_unique_entry"
@@ -107,6 +107,6 @@ Optional plugins:
 #if defined _Y_UNIQUE_INCLUDED
 	#undef _Y_UNIQUE_INCLUDED
 #else
-	#error Did you use `YSI_Coding/y_unique` instead of `YSI_Coding\y_unique`?
+	#error Could not find y_unique. On Linux, compile with -Z+.
 #endif
 

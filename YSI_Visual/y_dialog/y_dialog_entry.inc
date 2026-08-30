@@ -76,13 +76,13 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_utils"
-#include "..\..\YSI_Data\y_bit"
+#include <YSI_Core\y_utils>
+#include <YSI_Data\y_bit>
 
-#include "..\..\YSI_Coding\y_remote"
-#include "..\..\YSI_Coding\y_inline"
-#include "..\..\YSI_Coding\y_hooks"
-#include "y_dialog_impl"
+#include <YSI_Coding\y_remote>
+#include <YSI_Coding\y_inline>
+#include <YSI_Coding\y_hooks>
+#include <YSI_Visual\y_dialog\y_dialog_impl>
 
 #if defined YSI_TESTS
 	#if defined YSI_NO_TEST_WARNINGS
@@ -96,7 +96,7 @@ Optional plugins:
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_dialog_tests"
+	#include <YSI_Visual\y_dialog\y_dialog_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif

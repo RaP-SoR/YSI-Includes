@@ -78,22 +78,22 @@ Optional plugins:
 
 // y_uvars
 
-#include "..\..\YSI_Core\y_utils"
+#include <YSI_Core\y_utils>
 
 #if defined USE_Y_TIMERS_V1
 	#error y_timers version 1 has not worked in years!
 	#endinput
 #endif
 
-#include "..\y_malloc"
-#include "..\..\YSI_Data\y_iterate"
+#include <YSI_Coding\y_malloc>
+#include <YSI_Data\y_iterate>
 
-#include "y_timers_impl"
-#include "y_timers_macros"
+#include <YSI_Coding\y_timers\y_timers_impl>
+#include <YSI_Coding\y_timers\y_timers_macros>
 
 #if defined YSI_TESTS
-	#include "..\..\YSI_Coding\y_va"
-	#include "..\y_hooks"
+	#include <YSI_Coding\y_va>
+	#include <YSI_Coding\y_hooks>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning push
 		#pragma warning disable 203
@@ -105,10 +105,10 @@ Optional plugins:
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_timers_tests"
+	#include <YSI_Coding\y_timers\y_timers_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif
-	#include "..\y_hooks"
+	#include <YSI_Coding\y_hooks>
 #endif
 

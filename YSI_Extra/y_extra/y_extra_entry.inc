@@ -84,15 +84,15 @@ Optional plugins:
 #endif
 
 // If you want to use y_extra, you need to use these (but nothing else).
-#include "..\..\YSI_Visual\y_commands"
-#include "..\..\YSI_Players\y_text"
+#include <YSI_Visual\y_commands>
+#include <YSI_Players\y_text>
 
 #if defined _INC_y_users
-	#include "y_extra_users"
+	#include <YSI_Extra\y_extra\y_extra_users>
 #endif
 
 // Don't need to check for y_languages being included as it's done by y_text.
-#include "y_extra_languages"
+#include <YSI_Extra\y_extra\y_extra_languages>
 
-#include "y_extra_other"
+#include <YSI_Extra\y_extra\y_extra_other>
 

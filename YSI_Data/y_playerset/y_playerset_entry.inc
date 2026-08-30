@@ -76,9 +76,9 @@ Optional plugins:
 	Me - sscanf2, fixes2, Whirlpool.
 */
 
-#include "..\..\YSI_Core\y_utils"
-#include "..\y_playerarray"
-#include "..\y_iterate"
+#include <YSI_Core\y_utils>
+#include <YSI_Data\y_playerarray>
+#include <YSI_Data\y_iterate>
 
 #if !defined MAX_PLAYER_SET_STACK
     #define MAX_PLAYER_SET_STACK (3)
@@ -414,7 +414,7 @@ stock bool:__PS_A(@PlayerSet:addr, PlayerArray:ret<MAX_PLAYERS>)
 		#pragma warning disable 239
 		#pragma warning disable 240
 	#endif
-	#include "y_playerset_tests"
+	#include <YSI_Data\y_playerset\y_playerset_tests>
 	#if defined YSI_NO_TEST_WARNINGS
 		#pragma warning pop
 	#endif

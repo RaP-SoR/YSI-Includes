@@ -90,10 +90,10 @@ Optional plugins:
 */
 
 #if !defined _INC_y_races
-	#tryinclude "y_races\y_races_entry"
+	#tryinclude <YSI_Visual\y_races\y_races_entry>
 #endif
 #if !defined _INC_y_races
-	#tryinclude "YSI_Visual\y_races\y_races_entry"
+	#tryinclude <YSI_Visual\y_races\y_races_entry>
 #endif
 #if !defined _INC_y_races
 	#tryinclude "YSI\YSI_Visual\y_races\y_races_entry"
